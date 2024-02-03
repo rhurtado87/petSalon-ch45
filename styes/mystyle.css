@@ -1,0 +1,54 @@
+/*gobal*/
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+/*utilities*/
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8rem;
+}
+/*header*/
+.site-init{
+    background-color: #d6fff6;
+    height: 15rem;
+}
+
+/*main*/
+
+/*welcome*/
+.welcome-section{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.welcome-img{
+    background-color: #4dccbd;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.welcome-img img{
+    display: block;
+    width: 20rem;
+    border-radius: 20px;
+}
+/*servicers*/
+
+/*footer*/
+.site-footer{
+    background-color: black;
+    height: 10rem;
+}
