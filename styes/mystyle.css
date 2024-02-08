@@ -22,7 +22,7 @@ a{
 }
 /*header*/
 .site-init{
-    background-color: #d6fff6;
+    background-color: #175e4e;
     height: 15rem;
 }
 
@@ -49,6 +49,6 @@ a{
 
 /*footer*/
 .site-footer{
-    background-color: black;
+    background-color: rgb(223, 148, 148);
     height: 10rem;
 }

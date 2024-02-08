@@ -6,35 +6,45 @@ let salon={
         number:"234",
         zip:"23345"
     },
-pets:[{
-    name:"Scooby",
-    age:"60"
-},
-{
-    name:"Scrappy",
-    age:"50"
-},
-{
-    name:"Tweety Bird",
-    age:"80"
-}
-] //pet arry
+pets:[]
 }
 
-console.log(salon.pets[0].name);
-console.log(salon.pets[1].name);
-console.log(salon.pets[2].name);
-console.log(salon.pets[3].name);
+function Pet(n,a,g){
+    this.name=n;
+    this.age=a;
+    this.gender=g;
+}
+ //pet arry ----------------------------///
 
+function getE(id){
+    return document.getElementById(id);
+}
+//get elements from HTML
+let inputName=getE("txtName");
+let inputAge=getE("txtAge");
+let inputGender=getE("txtGender");
 
-//use a for loop to travel the array
-
+function register(){
+    // getting value
+    // create the newPet using the constructor
+    let newPet = newPet
+    
+}
+function init(){
+    //creating predafiend obj
+    let pet1=new Pet("Scooby",60,"Male");
+    let pet2=new Pet("Tom",60,"Male");
+    let pet3=new Pet("Jerry",60,"Male");
+    salon.pets.push(pet1,pet2,pet3)
+    //exacutiong fn
+    displayPetNames();
+    displayFooterInfo();
+}
+// display Footer ----------------------------------------------/// 
 function displayFooterInfo(){
-
-  document.getElementById("info").innerHTML=`
-  <p>Welcome to the ${salon.name} the address is ${salon.adderss.street}
-  ${salon.adderss.number} ${salon.adderss.zip}</p>
-  `;
-
-}
-displayFooterInfo();
+    document.getElementById("info").innerHTML=`
+    <p> Welcome to the ${salon.name} is located in ${salon.adderss.street}'
+    ${salon.adderss.number} ${salon.adderss.zip}</p>`;
+    
+    }
+window.onload=init;//wait to render the HTML
