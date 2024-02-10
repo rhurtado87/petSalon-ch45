@@ -19,6 +19,7 @@ function displayPetNames(){
                 <p>Breed: ${pet.breed}</p>
                 <p>Service: ${pet.service}</p>
                 <p>Type: ${pet.type}</p>
+                <p>Owner: ${pet.owner}</p>
             </div>
             `;
     }

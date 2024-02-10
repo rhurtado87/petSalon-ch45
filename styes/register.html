@@ -17,9 +17,12 @@
                     </nav>
         </div>
     </header>
-<main class="">
+<main>
     <h2>Register a New Pet</h2>
     <form class="container">
+        <div id="notifications" class="hidden">
+            <p>This is the notification section</p>
+        </div>
         <div>
             <label>Name:</label>
             <input type="text" id="txtName">
@@ -30,7 +33,10 @@
         </div>
         <div>
             <label>Gender:</label>
-            <input type="text" id="txtGender">
+            <select class="form-select" id="txtGender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                </select>
         </div>
         <div>
             <label>Breed:</label>
@@ -38,16 +44,24 @@
         </div>
         <div>
             <label>Service:</label>
-            <input type="text" id="txtService">
+            <select class="form-select" id="txtService">
+                <option value="grooming">Grooming</option>
+                <option value="vaccines">Vaccines</option>
+                <option value="nails">Nails trimming</option>
+            </select>
         </div>
         <div>
             <label>Type:</label>
             <input type="search" id="txtType">
         </div> 
+        <div>
+            <label>Owner</label>
+            <input type="search" id="txtOwner">
+        </div> 
 
     </form>
     <div>
-    <button class="btn" type="button" onclick="register();">Register Button</button>
+    <button class="btn" type="button" onclick=register();>Register Button</button>
         </div>
         
     <h2>Registered pets<span id="totalPets"></span></h2>

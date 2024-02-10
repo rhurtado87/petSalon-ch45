@@ -22,8 +22,11 @@ a{
 }
 /*header*/
 .site-init{
-    background-color: #175e4e;
-    height: 15rem;
+    display: block;
+    background-image: url("../img/image-asset.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 18rem;
 }
 
 /*main*/
@@ -65,4 +68,15 @@ a{
     background-color: rgb(197, 212, 154);
     border-radius: 5px;
     padding: 1rem;
+}
+.alert-error{
+    background-color: red;
+}
+.alert-pass{
+    background-color: green;
+}
+
+/* hidden class*/
+.hidden{
+    display: none;
 }
