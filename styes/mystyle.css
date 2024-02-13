@@ -1,4 +1,4 @@
- /*gobal*/
+/*------------------gobal---------------*/
 
 *{
     padding: 0;
@@ -13,20 +13,20 @@ img{
 a{
     text-decoration: none;
 }
-/*utilities*/
+/*----------------utilities---------------------*/
 .flex-container{
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 8rem;
 }
-/*header*/
+/*------------header------------------------*/
 .site-init{
     display: block;
     background-image: url("../img/image-asset.jpeg");
     background-repeat: no-repeat;
     background-position: center;
-    height: 18rem;
+    height: 20rem;
 }
 
 /*main*/
@@ -69,6 +69,7 @@ a{
     border-radius: 5px;
     padding: 1rem;
 }
+/*alert color*/
 .alert-error{
     background-color: red;
 }
@@ -79,4 +80,10 @@ a{
 /* hidden class*/
 .hidden{
     display: none;
+}
+
+/*table display*/
+.petTable{
+    display: block;
+    padding: 1rem;
 }

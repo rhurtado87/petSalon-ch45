@@ -1,4 +1,5 @@
 //contructor
+let petID=0;
 function Pet(n,a,g,b,s,t,o){
     this.name=n;
     this.age=a;
@@ -7,6 +8,7 @@ function Pet(n,a,g,b,s,t,o){
     this.service=s;
     this.type=t;
     this.owner=o;
+    this.id=petID++;
 }
 function isValid(){
     return document.getElementById(id);
@@ -66,6 +68,7 @@ function register(){
     salon.pets.push(newPet);
     // call display function
     displayPetCards();
+    
     // clear the input
     inputName.value="";
     inputAge.value="";
@@ -80,6 +83,19 @@ function register(){
         showNotifications("Plase fill the Missing Infomation","alert-error");
     }
 }
+//deletePet(id)
+function deletePet(petID){
+    let deleteIndex;// to get the index of the arrray postion 
+    for (let i = 0; i < salon.pets.length; i++) {
+        let pet = salon.pets[i];
+        if(pet.id==petID){
+            deleteIndex=i;
+            break;
+        }
+    }
+    getE(petID).remove(); //remove the pet from the array
+    salon.pets.splice(deleteIndex,1);
+}
 function init(){
 //creating predafiend obj
     let pet1=new Pet("Scooby",60,"Male","Toon","Grooming","Dog","warner bros");
@@ -88,6 +104,6 @@ function init(){
     let pet4=new Pet("Bugs",70,"Male","Toon","Grooming","Bunny","warner bros");
     salon.pets.push(pet1,pet2,pet3,pet4)
 //exacutiong fn -----------------------------------------------//
- displayPetCards();
+    displayPetCards();
 }
 window.onload=init;//wait to render the HTML
