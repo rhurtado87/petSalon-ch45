@@ -37,7 +37,7 @@ a{
     grid-template-columns: 50% 50%;
 }
 .welcome-img{
-    background-color: #4dccbd;
+    background-color: #101111;
     height: 30rem;
     display: flex;
     justify-content: center;
@@ -53,7 +53,7 @@ a{
 /*footer*/
 .site-footer{
     background-color: rgb(53, 35, 153);
-    height: 10rem;
+    height: 8rem;
     color: white;
 }
 
@@ -65,7 +65,7 @@ a{
     row-gap: 1rem;
 }
 .petCard{
-    background-color: rgb(197, 212, 154);
+    background-color: rgb(168, 204, 69);
     border-radius: 5px;
     padding: 1rem;
 }

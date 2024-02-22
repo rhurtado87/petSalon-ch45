@@ -27,34 +27,23 @@ function displayPetNames(){
     getE('pets').innerHTML=card;
 
 }
-function displayPetTable(){
-    getE('tableBody').innerHTML ="";
-    let tableBody = `
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Gender</th>
-                <th>Breed</th>
-                <th>Service</th>
-                <th>Type</th>
-                <th>Owner</th>
-            </tr>
-        </thead>
-        <tbody>
-`;
-pets.forEach(pet => {
-            let row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${pet.name}</td>
-                <td>${pet.type}</td>
-                <td>${pet.age}</td>
-                <td>${pet.breed}</td>
-                <td>${pet.service}</td>
-                <td>${pet.type}</td>
-                <td>${pet.owner}</td>
-            `;
-            tableBody.appendChild(row);
-        });
-    }
+function displayPetTable() {
+    getE('tableBody').innerHTML = "";
+    let tableBody = document.createElement('tbody');
+    
+    salon.pets.forEach(pet => {
+        let row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${pet.name}</td>
+            <td>${pet.age}</td>
+            <td>${pet.gender}</td>
+            <td>${pet.breed}</td>
+            <td>${pet.service}</td>
+            <td>${pet.type}</td>
+            <td>${pet.owner}</td>
+        `;
+        tableBody.appendChild(row);
+    });
+    
+    getE('tableBody').appendChild(tableBody);
+}
